@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>smart-sign.com Game of Life in webGL / threejs</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div class="infowindow" id="infowindow">
+        <h2>Conway's Game of Life in 3D</h2>
+
+        <p>The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, (or populated and unpopulated, respectively).</p>
+        
+        <p>To make this a bit more interesting, this game is mapped onto a 3D cube mesh.</p>
+        
+        <p>Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:</p>
+                
+        <ul>
+            <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+            <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+            <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+        </ul>    
+        <p>Press the start/stop button and watch what can happen by applying this simple set of rules.</p>
+        <p><a class="closebtn" href="javascript:void(0)" onclick="toggleInfo()">close window</a></p>
+    </div>
+    <a id="info" class="infobtn" href="javascript:Void(0)" onclick="toggleInfo()">i</a>
+    <canvas id="game"></canvas>
+    <div id="threecontainer" class="threecontainer"></div>
+    <div class="buttoncontainer">
+        <span id="toggle" class="button noselect">stop</span>
+        <span id="step" class="button noselect">step <span id="count">10000</span></span>
+        <div id="clear" class="button noselect">clear</div>
+        <span id="random" class="button noselect">random</span>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/custom.js"></script>
+    
+</body>
+</html>
