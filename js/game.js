@@ -10,8 +10,8 @@ function Game(canvas, cfg) {
 	
 	// Merge of the default and delivered config.
 	var defaults = {
-		cellsX    : 80,
-		cellsY    : 80,
+		cellsX    : 64,
+		cellsY    : 64,
 		cellSize  : 10,
 		gridColor : "#ddd",
     cellColor : "#000000",
